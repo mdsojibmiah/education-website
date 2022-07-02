@@ -10,12 +10,16 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- GOOGLE MONTSERRAT FONTS LINK  -->
     <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- ===================Swiper link============= -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
 </head>
 <body>
 <!-- =================START NAVBAR==================== -->
     <nav>
         <div class="container nav_container">
-            <a href="index.html"><h4>EGATOR</h4></a>
+            <a href="index.html"><h4>DEVDEER</h4></a>
             <ul class="nav_menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -234,9 +238,10 @@
 
 <!-- ====================TESTIMONIALS START=================== -->
 
-<section class="container testimonials_container">
+<section class="container testimonials_container swiper mySwiper">
     <h2>Student's Testimonials</h2>
-    <article class="testimonial">
+    <div class="swiper-wrapper">
+    <article class="testimonial swiper-slide">
         <div class="avater">
             <img src="images/avatar1.jpg" alt="">
         </div>
@@ -249,7 +254,7 @@
         </div>
     </article>
 
-    <article class="testimonial">
+    <article class="testimonial swiper-slide">
         <div class="avater">
             <img src="images/avatar2.jpg" alt="">
         </div>
@@ -262,7 +267,7 @@
         </div>
     </article>
 
-    <article class="testimonial">
+    <article class="testimonial swiper-slide">
         <div class="avater">
             <img src="images/avatar3.jpg" alt="">
         </div>
@@ -275,7 +280,7 @@
         </div>
     </article>
 
-    <article class="testimonial">
+    <article class="testimonial swiper-slide">
         <div class="avater">
             <img src="images/avatar4.jpg" alt="">
         </div>
@@ -288,7 +293,7 @@
         </div>
     </article>
 
-    <article class="testimonial">
+    <article class="testimonial swiper-slide">
         <div class="avater">
             <img src="images/avatar5.jpg" alt="">
         </div>
@@ -301,7 +306,7 @@
         </div>
     </article>
 
-    <article class="testimonial">
+    <article class="testimonial swiper-slide">
         <div class="avater">
             <img src="images/avatar6.jpg" alt="">
         </div>
@@ -313,15 +318,87 @@
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere ab aliquam ut cupiditate maiores corporis soluta, voluptas porro, consectetur expedita vel tempora esse quaerat? Mollitia illo voluptatum saepe exercitationem nihil!</p>
         </div>
     </article>
+</div>
 </section>
 
+<!-- ====================TESTIMONIALS END=================== -->
+
+
+<!-- ====================FOOTER START=================== -->
+
+<footer class="footer">
+    <div class="container footer_container">
+        <div class="footer_1">
+            <a href="index.html" class="footer_logo"><h4>DEVDEER</h4></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, voluptates?</p>
+        </div>
+        <div class="footer_2">
+            <h4>Permalinks</h4>
+            <ul class="permalinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li> 
+            </ul>
+        </div>
+
+        <div class="footer_3">
+            <h4>Privacy</h4>
+            <ul class="privacy">
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms and conditions</a></li>
+                <li><a href="">Refund Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer_4">
+            <h4>Contac Us</h4>
+            <div>
+                <p>+000000000000</p>
+                <p>devdeer@gmail.com</p>
+            </div>
+
+            <ul class="footer_socials">
+                <li><a href=""><i class="uil uil-facebook-f"></i></a></li>
+
+                <li><a href=""><i class="uil uil-instagram-alt"></i></a></li>
+
+                <li><a href=""><i class="uil uil-twitter"></i></a></li>
+                
+                <li><a href=""><i class="uil uil-linkedin"></i></a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="footer_copyright">
+        <small>Copyright &copy; DevDeer 2022</small>
+    </div>
+</footer>
+<!-- ====================FOOTER END=================== -->
 
 
 
 
-
-
-
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="main.js"></script>
+
+
+<!-- ===============Swiper js ==================== -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      //When window width is >=600px
+      breakpoints:{
+        600: {
+            slidesPerView: 2,
+        }
+      }
+    });
+  </script>
 </body>
 </html>
