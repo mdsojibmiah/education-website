@@ -290,6 +290,7 @@ header{
     overflow-x: hidden;
     position: relative;
     margin-bottom: 5rem;
+    margin-top: 6rem;
 }
 .testimonial{
     padding-top: 2rem;
@@ -364,3 +365,214 @@ header{
     padding: 1.2rem 0;
     border-top: 1px solid var(--color-bg2);
 }
+
+/* ################# FOOTER END ##################### */
+
+
+
+/* #####################################################################
+                        RESPONSIVE DESIGN
+################################################################### */
+
+/* ################# MEDIA QUERIES FOR TABLETS ##################### */
+
+@media  screen and (max-width:1024px) {
+    
+    .container{
+        width: var(--container-width-md);
+    }
+    h1{
+        font-size: 2.2rem;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    h3{
+        font-size: 1.4rem;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+
+
+    /* #################### NAVBAR ####################  */
+    nav button{
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+        color: var(--color-white);
+        cursor: pointer;
+    }
+    nav button#close-menu-btn{
+        display: none;
+    }
+    .nav_menu{
+        position: fixed;
+        top: 5rem;
+        right: 5%;
+        height: fit-content;
+        width: 18rem;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+    .nav_menu li{
+        width: 100%;
+        height: 5.8rem;
+        opacity: 0;
+        transform-origin: top right;
+        animation: animateNavItems 400ms linear forwards;
+    }
+    .nav_menu li:nth-child(2)
+    {
+        animation-delay: 200ms;
+    }
+    .nav_menu li:nth-child(3)
+    {
+        animation-delay: 400ms;
+    }
+    .nav_menu li:nth-child(4)
+    {
+        animation-delay: 600ms;
+    }
+    @keyframes animateNavItems {
+        0%{
+            transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+        }
+        100%{
+            transform: rotateZ(0deg) rotateX(0deg) scale(1);
+            opacity: 1;
+        }
+        
+    }
+    .nav_menu li a{
+        background: var(--color-primary);
+        box-shadow: -4rem 6rem 10rem rgba(0,0,0,0.6);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+    .nav_menu li a:hover{
+        background: var(--color-bg2);
+        color: var(--color-white);
+    }
+
+
+    /*##################### HEADER ##################### */
+    header{
+        height: 52vh;
+        margin-bottom: 4rem;
+    }
+    .header_container{
+        gap: 0;
+        padding-bottom: 3rem;
+    }
+
+
+    /*##################### CATEGORIES #######################*/
+    .categories{
+        height: auto;
+    }
+    .categories_container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .categories_left{
+        margin-left: 0;
+    }
+
+
+    /*########################### COURSES ###########################*/
+    .courses{
+        margin-top: 0;
+    }
+    .courses_container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    /*#################### FAQS QUESTION ###################*/
+    .faqs_container{
+        grid-template-columns: 1fr;
+    }
+    .faq{
+        padding: 1.5rem;
+    }
+
+
+    /*############################ FOOTER ###################################*/
+
+    .footer_container{
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+}
+
+/* ###############################  MEDIA QUERIES (PHONES)#################### */
+
+@media  screen and (max-width:600px){
+
+   .container{
+    width: var(--container-width-sm);
+   }
+
+   /*############## NAVBAR #################*/
+
+   .nav_menu{
+    right: 3%;
+   }
+
+   /*################## HEADER ############*/
+   header{
+    height: 100vh;
+   }
+    .header_container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 0;
+    }
+    .header_left p{
+        margin-bottom: 1.3rem;
+    }
+
+/*################### CATEGORIES ###################*/
+    .categories_right{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .category{
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+    .category_icon{
+        margin-top: 4px;
+        display: inline-block;
+    }
+/*################## COURSES ################*/
+    .courses_container{
+        grid-template-columns: 1fr;
+    }
+    /*################ TESTIMONISAL #################*/
+    .testimonial_body{
+        padding: 1.7rem;
+    }
+/*################## FOOTER ################*/
+    .footer_container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    .footer_1 p{
+        margin: 1rem auto;
+    }
+    .footer_socials{
+        justify-content: center;
+    }
+
+}
+
+/* #####################################################################
+                        RESPONSIVE DESIGN
+################################################################### */
